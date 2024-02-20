@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/anaFragment">
+
+    <fragment
+        android:id="@+id/AFragment"
+        android:name="com.free.odev4.AFragment"
+        android:label="fragment_a"
+        tools:layout="@layout/fragment_a" >
+        <action
+            android:id="@+id/a_to_b"
+            app:destination="@id/BFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/anaFragment"
+        android:name="com.free.odev4.AnaFragment"
+        android:label="fragment_ana"
+        tools:layout="@layout/fragment_ana" >
+        <action
+            android:id="@+id/ana_sayfa_to_a"
+            app:destination="@id/AFragment" />
+        <action
+            android:id="@+id/ana_sayfa_to_x"
+            app:destination="@id/XFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/BFragment"
+        android:name="com.free.odev4.BFragment"
+        android:label="fragment_b"
+        tools:layout="@layout/fragment_b" >
+        <action
+            android:id="@+id/b_to_y"
+            app:destination="@id/YFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/XFragment"
+        android:name="com.free.odev4.XFragment"
+        android:label="fragment_x"
+        tools:layout="@layout/fragment_x" >
+        <action
+            android:id="@+id/x_to_y"
+            app:destination="@id/YFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/YFragment"
+        android:name="com.free.odev4.YFragment"
+        android:label="fragment_y"
+        tools:layout="@layout/fragment_y" >
+        <action
+            android:id="@+id/back"
+            app:destination="@id/anaFragment" />
+    </fragment>
+</navigation>
